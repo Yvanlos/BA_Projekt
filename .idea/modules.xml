@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG Annotation Matcher.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG Annotation Matcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG Annotations.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG Annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG Code2Flow JS Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG Code2Flow JS Test Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG Code2Flow Python Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG Code2Flow Python Test Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG DOOP Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG DOOP Test Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG Data Format.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG Data Format.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG Dynamic Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG Dynamic Test Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG Evaluation.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG Evaluation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG Jarvis Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG Jarvis Test Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG Jelly Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG Jelly Test Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG OPAL Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG OPAL Test Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG PyCG Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG PyCG Test Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG Pyan Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG Pyan Test Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG Soot Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG Soot Test Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG TAJS Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG TAJS Test Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG Test Adapter Commons.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG Test Adapter Commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG Test Cases.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG Test Cases.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG WALA Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG WALA Test Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG js-callgraph Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG js-callgraph Test Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ba_projekt.iml" filepath="$PROJECT_DIR$/.idea/modules/ba_projekt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ba_projekt-build.iml" filepath="$PROJECT_DIR$/.idea/modules/ba_projekt-build.iml" />
+    </modules>
+  </component>
+</project>
