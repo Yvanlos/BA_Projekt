@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaSbtSettings">
+    <option name="customVMEnabled" value="true" />
+    <option name="customVMPath" value="$APPLICATION_HOME_DIR$/jbr/Contents/Home" />
+    <option name="linkedExternalProjectsSettings">
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/jcg_annotation_matcher" />
+            <option value="$PROJECT_DIR$/jcg_annotations" />
+            <option value="$PROJECT_DIR$/jcg_code2flow_js_testadapter" />
+            <option value="$PROJECT_DIR$/jcg_code2flow_py_testadapter" />
+            <option value="$PROJECT_DIR$/jcg_data_format" />
+            <option value="$PROJECT_DIR$/jcg_doop_testadapter" />
+            <option value="$PROJECT_DIR$/jcg_dynamic_testadapter" />
+            <option value="$PROJECT_DIR$/jcg_evaluation" />
+            <option value="$PROJECT_DIR$/jcg_jarvis_testadapter" />
+            <option value="$PROJECT_DIR$/jcg_jelly_testadapter" />
+            <option value="$PROJECT_DIR$/jcg_js_callgraph_testadapter" />
+            <option value="$PROJECT_DIR$/jcg_opal_testadapter" />
+            <option value="$PROJECT_DIR$/jcg_pyan_testadapter" />
+            <option value="$PROJECT_DIR$/jcg_pycg_testadapter" />
+            <option value="$PROJECT_DIR$/jcg_soot_testadapter" />
+            <option value="$PROJECT_DIR$/jcg_tajs_testadapter" />
+            <option value="$PROJECT_DIR$/jcg_testadapter_commons" />
+            <option value="$PROJECT_DIR$/jcg_testcases" />
+            <option value="$PROJECT_DIR$/jcg_wala_testadapter" />
+            <option value="$PROJECT_DIR$/project" />
+          </set>
+        </option>
+        <option name="resolveSbtClassifiers" value="true" />
+        <option name="sbtVersion" value="1.7.1" />
+        <option name="useQualifiedModuleNames" value="true" />
+        <option name="useSbtShellForBuild" value="true" />
+        <option name="useSbtShellForImport" value="true" />
+      </SbtProjectSettings>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="sbt: de.opal-project:abstract-interpretation-framework_2.13:5.0.1-SNAPSHOT:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/oss.sonatype.org/content/repositories/snapshots/de/opal-project/abstract-interpretation-framework_2.13/5.0.1-SNAPSHOT/abstract-interpretation-framework_2.13-5.0.1-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/oss.sonatype.org/content/repositories/snapshots/de/opal-project/abstract-interpretation-framework_2.13/5.0.1-SNAPSHOT/abstract-interpretation-framework_2.13-5.0.1-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/oss.sonatype.org/content/repositories/snapshots/de/opal-project/abstract-interpretation-framework_2.13/5.0.1-SNAPSHOT/abstract-interpretation-framework_2.13-5.0.1-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
