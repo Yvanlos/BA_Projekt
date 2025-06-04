@@ -203,6 +203,7 @@ lazy val jcg_evaluation = project.settings(
     jcg_testcases,
     jcg_data_format,
     jcg_annotation_matcher,
+    jcg_callgraphs_testadapter,
     jcg_testadapter_commons,
     jcg_wala_testadapter,
     jcg_soot_testadapter,
@@ -216,6 +217,5 @@ lazy val jcg_evaluation = project.settings(
     jcg_pycg_testadapter,
     jcg_pyan_testadapter,
     jcg_jarvis_testadapter,
-    jcg_dynamic_testadapter,
-    jcg_callgraphs_testadapter
+    jcg_dynamic_testadapter
 )
