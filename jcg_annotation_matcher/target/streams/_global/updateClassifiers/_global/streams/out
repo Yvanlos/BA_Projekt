@@ -1,0 +1,8 @@
+[0m[[0m[0mdebug[0m] [0m[0mnot up to date. inChanged = true, force = false[0m
+[0m[[0m[0mdebug[0m] [0m[0mUpdating ProjectRef(uri("file:/Users/MartinOwono/Desktop/SOSE25/BA/JCG/"), "jcg_annotation_matcher")...[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone updating ProjectRef(uri("file:/Users/MartinOwono/Desktop/SOSE25/BA/JCG/"), "jcg_annotation_matcher")[0m
+[0m[[0m[0mdebug[0m] [0m[0mfound version conflict(s) in library dependencies; some are suspected to be binary incompatible:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	* org.scala-lang.modules:scala-xml_2.13:2.2.0 (early-semver) is selected over {1.3.0}[0m
+[0m[[0m[0mdebug[0m] [0m[0m	    +- io.get-coursier:coursier-core_2.13:2.1.8           (depends on 2.2.0)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	    +- de.opal-project:common_2.13:5.0.1-SNAPSHOT         (depends on 1.3.0)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	    +- de.opal-project:bytecode-representation_2.13:5.0.1-SNAPSHOT (depends on 1.3.0)[0m
