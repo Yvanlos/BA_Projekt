@@ -1,0 +1,27 @@
+@startuml
+actor JVM
+
+participant "Agent_OnLoad()" as Agent
+participant "JVMTI" as JVMTI
+participant "MethodEntry()" as MethodEntry
+participant "return_cg()" as ReturnCG
+participant "TCP Socket" as Socket
+
+JVM -> Agent : lädt JVMTI-Agent (Agent_OnLoad)
+Agent -> JVMTI : GetEnv()\nAddCapabilities()\nSetEventCallbacks()
+Agent -> JVMTI : Enable MethodEntry\nEnable VMDeath
+
+loop Während der Programmlaufzeit
+    JVM -> MethodEntry : Methode aufgerufen
+    MethodEntry -> JVMTI : GetFrameLocation()
+    MethodEntry -> CallGraph : update(Callsite → Callee)
+end
+
+JVM -> JVMTI : VM wird beendet
+JVMTI -> ReturnCG : ruft VMDeath()
+
+ReturnCG -> CallGraph : Schleife über Callsite → Callee
+ReturnCG -> JVMTI : getMethodNameSig() für Caller/Callee
+ReturnCG -> Socket : send(JSON Callgraph)
+Socket --> JVM : Daten empfangen
+@enduml
