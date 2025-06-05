@@ -52,7 +52,7 @@ object OpalCallgraphTest extends Analysis[URL, BasicReport] with AnalysisApplica
         val callerMethod = triple._1
         reachableMethods.add(callerMethod)
       }
-
+m
       // Rekursiv alle Caller von Callern hinzufügen
       cg.callersOf(dm).foreach { triple =>
         addAllCallers(triple._1)
