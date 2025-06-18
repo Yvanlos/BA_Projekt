@@ -5,6 +5,8 @@
     <output-test url="file://$MODULE_DIR$/../../jcg_callgraphs_testadapter/target/scala-2.13/test-classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../jcg_callgraphs_testadapter">
+      <sourceFolder url="file://$MODULE_DIR$/../../jcg_callgraphs_testadapter/src/main/scala" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../jcg_callgraphs_testadapter/src/main/resources" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/../../jcg_callgraphs_testadapter/target" />
     </content>
     <orderEntry type="inheritedJdk" />

@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/jcg_annotation_matcher" />
             <option value="$PROJECT_DIR$/jcg_annotations" />
+            <option value="$PROJECT_DIR$/jcg_callgraphs_testadapter" />
             <option value="$PROJECT_DIR$/jcg_code2flow_js_testadapter" />
             <option value="$PROJECT_DIR$/jcg_code2flow_py_testadapter" />
             <option value="$PROJECT_DIR$/jcg_data_format" />

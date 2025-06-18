@@ -20,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG Test Adapter Commons.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG Test Adapter Commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG Test Cases.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG Test Cases.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG WALA Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG WALA Test Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG callgraphs Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG callgraphs Test Adapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JCG js-callgraph Test Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/JCG js-callgraph Test Adapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ba_projekt.iml" filepath="$PROJECT_DIR$/.idea/modules/ba_projekt.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ba_projekt-build.iml" filepath="$PROJECT_DIR$/.idea/modules/ba_projekt-build.iml" />

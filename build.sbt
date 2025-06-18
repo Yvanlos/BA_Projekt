@@ -175,11 +175,6 @@ jcg_dynamic_testadapter / buildJVMTIAgent := {
 lazy val buildCallGraphJVMTIAgent = taskKey[Unit]("Build the JVMTI Agent For the CallGraph Adapter")
 
 jcg_callgraphs_testadapter / buildCallGraphJVMTIAgent := {
-    //import sys.process._
-    // Bestimme das Library-Suffix basierend auf dem Betriebssystem
-    //val libExt = if (System.getProperty("os.name").toLowerCase.contains("mac")) "dylib" else "so"
-    // Baue den g++-Kommando-String dynamisch
-    //val compileCmd = s"g++ -std=c++11 -fPIC -shared -o jcg_callgraphs_testadapter/src/main/resources/DynamicCG.$libExt -I ${System.getProperty("JAVA_HOME")}/include -I ${System.getProperty("JAVA_HOME")}/include/darwin jcg_callgraphs_testadapter/src/main/resources/DynamicCG.cpp"
     import sys.process._
 
     // Bestimme das Library-Suffix basierend auf dem Betriebssystem
@@ -191,7 +186,6 @@ jcg_callgraphs_testadapter / buildCallGraphJVMTIAgent := {
     val includeDir = s"-I $javaHome/include"
     val osIncludeDir = if (osName.contains("mac")) s"-I $javaHome/include/darwin" else s"-I $javaHome/include/linux"
 
-    //val compileCmd = s"g++ -std=c++11 -fPIC -shared -o jcg_callgraphs_testadapter/src/main/resources/DynamicCG.$libExt $includeDir $osIncludeDir jcg_callgraphs_testadapter/src/main/resources/DynamicCG.cpp"
     val compileCmd = s"""g++ -std=c++11 -fPIC -shared -o jcg_callgraphs_testadapter/src/main/resources/DynamicCG.$libExt -I"$javaHome/include" -I"$javaHome/include/${if (osName.contains("mac")) "darwin" else "linux"}" jcg_callgraphs_testadapter/src/main/resources/DynamicCG.cpp"""
 
     // Zur Kontrolle ausgeben
@@ -226,7 +220,7 @@ lazy val jcg_callgraphs_testadapter = project.settings(
     publishArtifact := false,
     Compile / compile := (Compile / compile).dependsOn(buildCallGraphJVMTIAgent).value
 ).dependsOn(
-    jcg_testadapter_commons
+    jcg_testadapter_commons,
 )
 lazy val jcg_evaluation = project.settings(
     commonSettings,
@@ -254,5 +248,5 @@ lazy val jcg_evaluation = project.settings(
     jcg_pyan_testadapter,
     jcg_jarvis_testadapter,
     jcg_dynamic_testadapter,
-    jcg_callgraphs_testadapter,
+    jcg_callgraphs_testadapter
 )
