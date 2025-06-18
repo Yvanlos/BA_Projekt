@@ -1,5 +1,3 @@
-package de.tud.sse.fpspa
-
 import com.typesafe.config.{Config, ConfigValueFactory}
 import org.opalj.br.DeclaredMethod
 import org.opalj.br.analyses.{Analysis, AnalysisApplication, BasicReport, ProgressManagement, Project, ReportableAnalysisResult}
@@ -54,7 +52,7 @@ object OpalCallgraphTest extends Analysis[URL, BasicReport] with AnalysisApplica
         val callerMethod = triple._1
         reachableMethods.add(callerMethod)
       }
-
+m
       // Rekursiv alle Caller von Callern hinzufügen
       cg.callersOf(dm).foreach { triple =>
         addAllCallers(triple._1)

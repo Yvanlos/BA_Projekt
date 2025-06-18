@@ -1,5 +1,3 @@
-package de.tud.sse.fpspa
-
 import com.typesafe.config.{Config, ConfigValueFactory}
 import org.opalj.br.DeclaredMethod
 import org.opalj.br.analyses.{Analysis, AnalysisApplication, BasicReport, ProgressManagement, Project, ReportableAnalysisResult}

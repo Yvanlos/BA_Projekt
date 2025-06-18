@@ -1,0 +1,19 @@
+@startuml
+actor "User" as User
+participant "OpalCallgraphTest" as Test
+participant "Project" as Project
+participant "RTACallGraphKey" as RTA
+participant "Callgraph" as CG
+participant "BasicReport" as Report
+
+User -> Test : analyze(project, parameters, ...)
+Test -> Project : get(RTACallGraphKey)
+Project -> RTA : <static> apply(...)
+RTA --> Project : Callgraph
+Test -> CG : reachableMethods()
+Test -> CG : callersOf(targetMethod)
+loop rekursive Caller
+    Test -> CG : callersOf(callerMethod)
+end
+Test -> Report : new(...)
+@enduml

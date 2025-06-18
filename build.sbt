@@ -1,3 +1,4 @@
+import sbt.Compile
 import sbt.Keys.libraryDependencies
 
 ThisBuild / javacOptions ++= Seq("-encoding", "utf8", "-parameters")
@@ -9,6 +10,9 @@ ThisBuild / libraryDependencySchemes ++= Seq(
 lazy val commonSettings = Seq(
     scalaVersion := "2.13.8",
     organization := "de.opal-project",
+
+
+
     homepage := Some(url("https://bitbucket.org/delors/jcg")),
     licenses := Seq("BSD-2-Clause" -> url("http://opensource.org/licenses/BSD-2-Clause")),
     resolvers ++= Resolver.sonatypeOssRepos("snapshots"),
@@ -161,28 +165,47 @@ lazy val jcg_dynamic_testadapter = project.settings(
     Compile / compile := (Compile / compile).dependsOn(buildJVMTIAgent).value
 ).dependsOn(jcg_testadapter_commons)
 
-lazy val jcg_callGraphs_testadapter = project.settings(
-    commonSettings,
-    name := "JCG Callgraphs Test Adapter",
-    libraryDependencies ++= Seq(
-        "de.opal-project" %% "bytecode-representation" % "5.0.1-SNAPSHOT",
-        "de.opal-project" %% "three-address-code" % "5.0.1-SNAPSHOT",
-        "com.typesafe" % "config" % "1.4.2"
-    ),
-    assembly / aggregate := false,
-    publishArtifact := false,
-    Compile / compile := (Compile / compile).dependsOn(buildJVMTIAgent).value
-).dependsOn(
-    jcg_testadapter_commons,
-    jcg_annotation_matcher
-)
-
 lazy val buildJVMTIAgent = taskKey[Unit]("Build the JVMTI Agent")
 
 jcg_dynamic_testadapter / buildJVMTIAgent := {
     import sys.process._
     s"g++ -fPIC -shared -o jcg_dynamic_testadapter/src/main/resources/DynamicCG.so -I ${System.getProperty("java.home")}/../include -I ${System.getProperty("java.home")}/../include/linux jcg_dynamic_testadapter/src/main/resources/DynamicCG.cpp" !
 }
+lazy val buildCallGraphJVMTIAgent = taskKey[Unit]("Build the JVMTI Agent For the CallGraph Adapter")
+
+jcg_callgraphs_testadapter / buildCallGraphJVMTIAgent := {
+    //import sys.process._
+    // Bestimme das Library-Suffix basierend auf dem Betriebssystem
+    //val libExt = if (System.getProperty("os.name").toLowerCase.contains("mac")) "dylib" else "so"
+    // Baue den g++-Kommando-String dynamisch
+    //val compileCmd = s"g++ -std=c++11 -fPIC -shared -o jcg_callgraphs_testadapter/src/main/resources/DynamicCG.$libExt -I ${System.getProperty("JAVA_HOME")}/include -I ${System.getProperty("JAVA_HOME")}/include/darwin jcg_callgraphs_testadapter/src/main/resources/DynamicCG.cpp"
+    import sys.process._
+
+    // Bestimme das Library-Suffix basierend auf dem Betriebssystem
+    val osName = System.getProperty("os.name").toLowerCase
+    val libExt = if (osName.contains("mac")) "dylib" else "so"
+
+    // Baue den g++-Kommando-String dynamisch
+    val javaHome = System.getProperty("JAVA_HOME")
+    val includeDir = s"-I $javaHome/include"
+    val osIncludeDir = if (osName.contains("mac")) s"-I $javaHome/include/darwin" else s"-I $javaHome/include/linux"
+
+    val compileCmd = s"g++ -std=c++11 -fPIC -shared -o jcg_callgraphs_testadapter/Dynamische_Callgraph/src/main/resources/DynamicCG.$libExt $includeDir $osIncludeDir jcg_callgraphs_testadapter/Dynamische_Callgraph/src/main/resources/DynamicCG.cpp"
+
+    // Zur Kontrolle ausgeben
+    println(s"Kompiliere mit folgendem Kommando:\n$compileCmd")
+
+    // Ausführen
+    val exitCode = compileCmd.!
+
+    if (exitCode == 0) {
+        println("Kompilierung erfolgreich.")
+    } else {
+        println(s"Kompilierung fehlgeschlagen mit Exit-Code: $exitCode")
+    }
+}
+
+
 
 lazy val jcg_testadapter_commons = project.settings(
     commonSettings,
@@ -191,6 +214,19 @@ lazy val jcg_testadapter_commons = project.settings(
     libraryDependencies += "com.lihaoyi" %% "upickle" % "3.1.0"
 ).dependsOn(jcg_data_format)
 
+lazy val jcg_callgraphs_testadapter = project.settings(
+    commonSettings,
+    name := "JCG callgraphs Test Adapter",
+    libraryDependencies += "de.opal-project" %% "bytecode-representation" % "5.0.1-SNAPSHOT",
+    libraryDependencies += "de.opal-project" %% "three-address-code" % "5.0.1-SNAPSHOT",
+    libraryDependencies += "com.typesafe.play" %% "play-json" % "2.9.2",
+    assembly / aggregate := false,
+    publishArtifact := false,
+    Compile / compile := (Compile / compile).dependsOn(buildCallGraphJVMTIAgent).value
+
+).dependsOn(
+    jcg_testadapter_commons
+)
 lazy val jcg_evaluation = project.settings(
     commonSettings,
     name := "JCG Evaluation",
@@ -217,5 +253,5 @@ lazy val jcg_evaluation = project.settings(
     jcg_pyan_testadapter,
     jcg_jarvis_testadapter,
     jcg_dynamic_testadapter,
-    jcg_callgraphs_testadapter
+    jcg_callgraphs_testadapter,
 )
