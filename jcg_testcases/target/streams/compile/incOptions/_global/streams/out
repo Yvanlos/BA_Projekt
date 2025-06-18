@@ -1,0 +1,16 @@
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_testcases/target/scala-2.13/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TestCaseExtractor.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FileOperations.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JavaTestExtractor.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PyTestExtractor$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JavaTestExtractor$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JSTestExtractor$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PyTestExtractor.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FileOperations$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TestCaseExtractor$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JSTestExtractor.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TestCaseExtractor$$anonfun$getArgumentValue$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_testcases/target/scala-2.13/classes.bak[0m

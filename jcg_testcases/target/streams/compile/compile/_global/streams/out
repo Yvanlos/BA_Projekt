@@ -1,0 +1,9 @@
+[0m[[0m[0mdebug[0m] [0m[0mAcquiring lock on file /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/project/target/.sbt-compilation-infos/jcg_testcases-compile/.sbt-idea-lock ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_testcases/src/main/scala/TestCaseExtractor.scala:108:8: TestCaseExtractor has a valid main method (args: Array[String]): Unit,[0m
+[0m[[0m[33mwarn[0m] [0m[0m  but TestCaseExtractor will not have an entry point on the JVM.[0m
+[0m[[0m[33mwarn[0m] [0m[0m  Reason: companion is a trait, which means no static forwarder can be generated.[0m
+[0m[[0m[33mwarn[0m] [0m[0mobject TestCaseExtractor {[0m
+[0m[[0m[33mwarn[0m] [0m[0m       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m1 deprecation (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[0mdebug[0m] [0m[0mReleasing lock on file /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/project/target/.sbt-compilation-infos/jcg_testcases-compile/.sbt-idea-lock.[0m
