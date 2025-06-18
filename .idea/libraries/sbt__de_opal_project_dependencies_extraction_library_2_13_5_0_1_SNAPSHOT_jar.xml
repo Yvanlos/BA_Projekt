@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="sbt: de.opal-project:dependencies-extraction-library_2.13:5.0.1-SNAPSHOT:jar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/oss.sonatype.org/content/repositories/snapshots/de/opal-project/dependencies-extraction-library_2.13/5.0.1-SNAPSHOT/dependencies-extraction-library_2.13-5.0.1-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/local/de.opal-project/dependencies-extraction-library_2.13/5.0.1-SNAPSHOT/jars/dependencies-extraction-library_2.13.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/oss.sonatype.org/content/repositories/snapshots/de/opal-project/dependencies-extraction-library_2.13/5.0.1-SNAPSHOT/dependencies-extraction-library_2.13-5.0.1-SNAPSHOT-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/local/de.opal-project/dependencies-extraction-library_2.13/5.0.1-SNAPSHOT/docs/dependencies-extraction-library_2.13-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/oss.sonatype.org/content/repositories/snapshots/de/opal-project/dependencies-extraction-library_2.13/5.0.1-SNAPSHOT/dependencies-extraction-library_2.13-5.0.1-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/local/de.opal-project/dependencies-extraction-library_2.13/5.0.1-SNAPSHOT/srcs/dependencies-extraction-library_2.13-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

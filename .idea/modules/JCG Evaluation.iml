@@ -12,6 +12,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="JCG Annotation Matcher" exported="" />
+    <orderEntry type="module" module-name="JCG callgraphs Test Adapter" exported="" />
     <orderEntry type="module-library">
       <library name="sbt: unmanaged-sources-and-docs">
         <CLASSES />
@@ -141,5 +142,6 @@
     <orderEntry type="module" module-name="JCG Data Format" exported="" />
     <orderEntry type="module" module-name="JCG Code2Flow Python Test Adapter" exported="" />
     <orderEntry type="module" module-name="JCG Code2Flow JS Test Adapter" exported="" />
+    <orderEntry type="library" name="sbt: de.opal-project:ifds_2.13:5.0.1-SNAPSHOT:jar" level="project" />
   </component>
 </module>
