@@ -1,0 +1,74 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(compile, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: jcg_jarvis_testadapter / Compile / compile, jcg_opal_testadapter / Compile / compile, jcg_callgraphs_testadapter / Compile / compile, jcg_jelly_testadapter / Compile / compile, jcg_doop_testadapter / Compile / compile, jcg_tajs_testadapter / Compile / compile, jcg_annotations / Compile / compile, jcg_testadapter_commons / Compile / compile, jcg_pyan_testadapter / Compile / compile, jcg_testcases / Compile / compile, jcg_evaluation / Compile / compile, jcg_wala_testadapter / Compile / compile, jcg_code2flow_py_testadapter / Compile / compile, jcg_js_callgraph_testadapter / Compile / compile, jcg_dynamic_testadapter / Compile / compile, jcg_pycg_testadapter / Compile / compile, jcg_code2flow_js_testadapter / Compile / compile, jcg_data_format / Compile / compile, jcg_soot_testadapter / Compile / compile, jcg_annotation_matcher / Compile / compile, Compile / compile[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 4 Java sources to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_annotations/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_data_format/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[33mwarn[0m] [0m[0m15 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 5 Scala sources to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_testcases/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 7 Scala sources and 1 Java source to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_testadapter_commons/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_testadapter_commons/src/main/scala/AdapterOptions.scala:4:21: abstract type pattern T is unchecked since it is eliminated by erasure[0m
+[0m[[0m[33mwarn[0m] [0m[0m        case value: T => Some(value)[0m
+[0m[[0m[33mwarn[0m] [0m[0m                    ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_testcases/src/main/scala/TestCaseExtractor.scala:108:8: TestCaseExtractor has a valid main method (args: Array[String]): Unit,[0m
+[0m[[0m[33mwarn[0m] [0m[0m  but TestCaseExtractor will not have an entry point on the JVM.[0m
+[0m[[0m[33mwarn[0m] [0m[0m  Reason: companion is a trait, which means no static forwarder can be generated.[0m
+[0m[[0m[33mwarn[0m] [0m[0mobject TestCaseExtractor {[0m
+[0m[[0m[33mwarn[0m] [0m[0m       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m1 deprecation (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_tajs_testadapter/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_pycg_testadapter/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source and 1 Java source to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_wala_testadapter/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_jelly_testadapter/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_js_callgraph_testadapter/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[33mwarn[0m] [0m[0m1 deprecation (since 2.13.3); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_jarvis_testadapter/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 4 Scala sources to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_callgraphs_testadapter/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 5 Scala sources to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_annotation_matcher/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m9 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[33mwarn[0m] [0m[0m1 deprecation (since 2.13.3); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_code2flow_py_testadapter/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_pyan_testadapter/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_soot_testadapter/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m1 deprecation[0m
+[0m[[0m[33mwarn[0m] [0m[0m9 deprecations (since 2.13.0)[0m
+[0m[[0m[33mwarn[0m] [0m[0m10 deprecations in total; re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_code2flow_js_testadapter/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m38 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_opal_testadapter/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_doop_testadapter/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_callgraphs_testadapter/src/main/scala/jcg_callgraphs_testadapter/static/StaticRunner.scala:23:18: not found: value AnalysisApplication[0m
+[0m[[0m[31merror[0m] [0m[0m    val report = AnalysisApplication.runAnalysis([0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0m44 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[33mwarn[0m] [0m[0m28 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[31merror[0m] [0m[0m(jcg_callgraphs_testadapter / Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 44 s, completed 18.06.2025, 15:49:38[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

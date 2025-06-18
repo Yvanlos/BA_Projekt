@@ -1,0 +1,6 @@
+[0m[[0m[0mdebug[0m] [0m[0mAcquiring lock on file /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/project/target/.sbt-compilation-infos/jcg_testadapter_commons-compile/.sbt-idea-lock ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_testadapter_commons/src/main/scala/AdapterOptions.scala:4:21: abstract type pattern T is unchecked since it is eliminated by erasure[0m
+[0m[[0m[33mwarn[0m] [0m[0m        case value: T => Some(value)[0m
+[0m[[0m[33mwarn[0m] [0m[0m                    ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0mdebug[0m] [0m[0mReleasing lock on file /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/project/target/.sbt-compilation-infos/jcg_testadapter_commons-compile/.sbt-idea-lock.[0m

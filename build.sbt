@@ -9,6 +9,7 @@ ThisBuild / libraryDependencySchemes ++= Seq(
 
 lazy val commonSettings = Seq(
     scalaVersion := "2.13.8",
+    //scalaVersion := "2.12.7", OMG NICHT EINSETZEN!!!
     organization := "de.opal-project",
 
 
@@ -190,7 +191,8 @@ jcg_callgraphs_testadapter / buildCallGraphJVMTIAgent := {
     val includeDir = s"-I $javaHome/include"
     val osIncludeDir = if (osName.contains("mac")) s"-I $javaHome/include/darwin" else s"-I $javaHome/include/linux"
 
-    val compileCmd = s"g++ -std=c++11 -fPIC -shared -o jcg_callgraphs_testadapter/Dynamische_Callgraph/src/main/resources/DynamicCG.$libExt $includeDir $osIncludeDir jcg_callgraphs_testadapter/Dynamische_Callgraph/src/main/resources/DynamicCG.cpp"
+    //val compileCmd = s"g++ -std=c++11 -fPIC -shared -o jcg_callgraphs_testadapter/src/main/resources/DynamicCG.$libExt $includeDir $osIncludeDir jcg_callgraphs_testadapter/src/main/resources/DynamicCG.cpp"
+    val compileCmd = s"""g++ -std=c++11 -fPIC -shared -o jcg_callgraphs_testadapter/src/main/resources/DynamicCG.$libExt -I"$javaHome/include" -I"$javaHome/include/${if (osName.contains("mac")) "darwin" else "linux"}" jcg_callgraphs_testadapter/src/main/resources/DynamicCG.cpp"""
 
     // Zur Kontrolle ausgeben
     println(s"Kompiliere mit folgendem Kommando:\n$compileCmd")
@@ -223,7 +225,6 @@ lazy val jcg_callgraphs_testadapter = project.settings(
     assembly / aggregate := false,
     publishArtifact := false,
     Compile / compile := (Compile / compile).dependsOn(buildCallGraphJVMTIAgent).value
-
 ).dependsOn(
     jcg_testadapter_commons
 )

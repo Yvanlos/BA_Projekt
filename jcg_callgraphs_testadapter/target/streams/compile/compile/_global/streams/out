@@ -1,1 +1,6 @@
-[0m[[0m[0mdebug[0m] [0m[0mAcquiring lock on file /Users/MartinOwono/Desktop/SOSE25/BA/JCGBA/project/target/.sbt-compilation-infos/jcg_callGraphs_testadapter-compile/.sbt-idea-lock ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mAcquiring lock on file /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/project/target/.sbt-compilation-infos/jcg_callgraphs_testadapter-compile/.sbt-idea-lock ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_callgraphs_testadapter/src/main/scala/jcg_callgraphs_testadapter/static/StaticRunner.scala:23:18: not found: value AnalysisApplication[0m
+[0m[[0m[31merror[0m] [0m[0m    val report = AnalysisApplication.runAnalysis([0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[0mdebug[0m] [0m[0mReleasing lock on file /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/project/target/.sbt-compilation-infos/jcg_callgraphs_testadapter-compile/.sbt-idea-lock.[0m

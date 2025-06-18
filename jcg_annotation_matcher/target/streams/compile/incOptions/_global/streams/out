@@ -1,0 +1,30 @@
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_annotation_matcher/target/scala-2.13/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AnnotationHelper.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Imprecise$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Unsound.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	DevNullLogger.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AnnotationHelper$$anonfun$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AnnotationVerifier.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AnnotationHelper$$anonfun$5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AnnotationHelper$$anonfun$7.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AnnotationHelper$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CGMatcher$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Timeout.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AnnotationHelper$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CGMatcher.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AnnotationHelper$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AnnotationHelper$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Assessment.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Unsound$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Timeout$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AnnotationVerifier$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Imprecise.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Error$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Error.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sound$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AnnotationHelper$$anonfun$6.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sound.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /Users/MartinOwono/Desktop/SOSE25/BA/BA_Projekt/jcg_annotation_matcher/target/scala-2.13/classes.bak[0m
