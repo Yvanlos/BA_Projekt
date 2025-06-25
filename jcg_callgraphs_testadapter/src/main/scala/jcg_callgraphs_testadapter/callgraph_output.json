@@ -1,0 +1,16 @@
+[ {
+  "caller" : "lrr/Demo:main",
+  "callee" : "java/lang/Class:forName"
+}, {
+  "caller" : "lrr/Demo:main",
+  "callee" : "java/lang/StringBuilder:<init>"
+}, {
+  "caller" : "lrr/Demo:main",
+  "callee" : "java/lang/StringBuilder:append"
+}, {
+  "caller" : "lrr/Demo:main",
+  "callee" : "java/lang/StringBuilder:append"
+}, {
+  "caller" : "lrr/Demo:main",
+  "callee" : "java/lang/StringBuilder:toString"
+} ]

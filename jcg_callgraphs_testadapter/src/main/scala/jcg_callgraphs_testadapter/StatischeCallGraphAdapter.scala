@@ -12,21 +12,12 @@ import play.api.libs.json._
 
 import scala.collection.mutable
 
-// Case classes für JSON-Struktur
-case class CallGraphResult(
-                            affectedClasses: Int,
-                            numEdge: Int,
-                            reachableMethods: Int,
-                            vulnerableMethods: Int,
-                            callers: Seq[CallerEntry]
-                          )
+// Case class für JSON-Element im Stil des JVMTI-Agenten
+case class CallGraphEntry(caller: String, callee: String)
 
-case class CallerEntry(methodName: String, className: String)
-
-// JSON formatter
-object CallGraphResult {
-  implicit val callerEntryWrites: Writes[CallerEntry] = Json.writes[CallerEntry]
-  implicit val callGraphResultWrites: Writes[CallGraphResult] = Json.writes[CallGraphResult]
+// JSON Formatter
+object CallGraphEntry {
+  implicit val writes: Writes[CallGraphEntry] = Json.writes[CallGraphEntry]
 }
 
 object StatischeCallGraphAdapter extends Analysis[URL, BasicReport] with AnalysisApplication {
@@ -44,46 +35,42 @@ object StatischeCallGraphAdapter extends Analysis[URL, BasicReport] with Analysi
   override def analyze(project: Project[URL], parameters: Seq[String], initProgressManagement: Int => ProgressManagement): BasicReport = {
     val cg = project.get(RTACallGraphKey)
 
-    val methodName = "verifyCall"
-    val className = "lrr/Demo"
+    // Wir wollen alle "call graph edges" sammeln als caller -> callee Paare
+    val entries = mutable.ArrayBuffer[CallGraphEntry]()
 
-    val reachableMethods = new mutable.HashSet[DeclaredMethod]()
+    // Iteriere alle Kanten: caller -callee- Methode
+    // Die Callgraph-API hat Methoden:
+    // cg.callersOf(callee) liefert Iterator[(DeclaredMethod, location, Int)]
+    // Wir machen es umgekehrt: Iteriere alle Methoden und alle deren Aufrufer
 
-    def addAllCallers(dm: DeclaredMethod): Unit = {
-      if (reachableMethods.contains(dm)) return
-      cg.callersOf(dm).foreach { triple =>
-        val callerMethod = triple._1
-        reachableMethods.add(callerMethod)
+    // Alle erreichbaren Methoden durchlaufen
+    val reachableMethods = cg.reachableMethods()
+
+    // Für jede Methode finden wir ihre Aufrufer (callers) und speichern caller -> callee
+    reachableMethods.foreach { ctx =>
+      val callee = ctx.method
+      val callerTriples = cg.callersOf(callee)
+      callerTriples.foreach { triple =>
+        val caller = triple._1
+        entries += CallGraphEntry(
+          caller = s"${caller.declaringClassType.fqn}:${caller.name.toString}",
+          callee = s"${callee.declaringClassType.fqn}:${callee.name.toString}"
+        )
       }
-      cg.callersOf(dm).foreach { triple =>
-        addAllCallers(triple._1)
-      }
     }
 
-    val targetMethodOpt = cg.reachableMethods().toList.find { ctx =>
-      ctx.method.declaringClassType.fqn == className && ctx.method.name == methodName
-    }.map(_.method)
-
-    if (targetMethodOpt.isDefined) {
-      addAllCallers(targetMethodOpt.get)
-    } else {
-      println(s"No vulnerable Method found for: $methodName in class $className")
+    // Optional: Wenn es Methoden ohne Aufrufer gibt (z.B. Entry Points), dann "TopLevel"
+    val calleesWithCaller = entries.map(_.callee).toSet
+    val topLevelMethods = reachableMethods.filterNot(ctx => calleesWithCaller.contains(s"${ctx.method.declaringClassType.fqn}:${ctx.method.name}"))
+    topLevelMethods.foreach { ctx =>
+      entries += CallGraphEntry(
+        caller = "TopLevel",
+        callee = s"${ctx.method.declaringClassType.fqn}:${ctx.method.name.toString}"
+      )
     }
 
-    val callerEntries = reachableMethods.toSeq.map { m =>
-      CallerEntry(m.name.toString, m.declaringClassType.fqn)
-    }
-
-    val result = CallGraphResult(
-      affectedClasses = reachableMethods.map(_.declaringClassType).toSet.size,
-      numEdge = cg.numEdges,
-      reachableMethods = cg.reachableMethods().size,
-      vulnerableMethods = reachableMethods.size,
-      callers = callerEntries
-    )
-
-    // JSON-Datei schreiben
-    val json = Json.prettyPrint(Json.toJson(result))
+    // JSON schreiben - Array von {caller, callee}
+    val json = Json.prettyPrint(Json.toJson(entries))
     val outFile = new File("out/jcg_callgraphs_testadapter/callgraph_output.json")
     outFile.getParentFile.mkdirs()
     val pw = new PrintWriter(outFile)
@@ -91,14 +78,12 @@ object StatischeCallGraphAdapter extends Analysis[URL, BasicReport] with Analysi
 
     println(s"JSON output written to ${outFile.getAbsolutePath}")
 
-    // Auch als BasicReport ausgeben
+    // Für BasicReport können wir noch ein paar Stats ausgeben
     val stats = Seq(
-      s"Affected classes: ${result.affectedClasses}",
-      s"CG Num Edges = ${result.numEdge}",
-      s"CG Reachable Methods = ${result.reachableMethods}",
-      s"CG Vulnerable Methods = ${result.vulnerableMethods}"
+      s"Total edges (caller->callee): ${entries.size}",
+      s"Reachable methods: ${reachableMethods.size}"
     )
-    val detailed = result.callers.map(e => s"Caller: ${e.methodName} in ${e.className}")
+    val detailed = entries.take(20).map(e => s"Caller: ${e.caller} -> Callee: ${e.callee}") // max 20 als Beispiel
 
     BasicReport(stats ++ detailed)
   }
