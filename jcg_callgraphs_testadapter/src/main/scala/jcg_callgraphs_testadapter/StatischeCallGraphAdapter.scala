@@ -1,13 +1,16 @@
+package jcg_callgraphs_testadapter
+
+import java.io.{File, PrintWriter}
+import java.net.URL
+
 import com.typesafe.config.{Config, ConfigValueFactory}
 import org.opalj.br.DeclaredMethod
 import org.opalj.br.analyses.{Analysis, AnalysisApplication, BasicReport, ProgressManagement, Project, ReportableAnalysisResult}
 import org.opalj.log.LogContext
 import org.opalj.tac.cg.RTACallGraphKey
-
-import java.io.{File, PrintWriter}
-import java.net.URL
-import scala.collection.mutable
 import play.api.libs.json._
+
+import scala.collection.mutable
 
 // Case classes für JSON-Struktur
 case class CallGraphResult(
@@ -26,9 +29,9 @@ object CallGraphResult {
   implicit val callGraphResultWrites: Writes[CallGraphResult] = Json.writes[CallGraphResult]
 }
 
-object OpalCallgraphTest extends Analysis[URL, BasicReport] with AnalysisApplication {
+object StatischeCallGraphAdapter extends Analysis[URL, BasicReport] with AnalysisApplication {
 
-  override def title: String = "OPAL Callgraph Demo"
+  override def title: String = "Statische Callgraph Adapter"
 
   override def setupProject(cpFiles: Iterable[File], libcpFiles: Iterable[File], completelyLoadLibraries: Boolean, configuredConfig: Config)(implicit initialLogContext: LogContext): Project[URL] = {
     val newConfig = configuredConfig.withValue(
