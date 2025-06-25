@@ -182,7 +182,7 @@ jcg_callgraphs_testadapter / buildCallGraphJVMTIAgent := {
     val libExt = if (osName.contains("mac")) "dylib" else "so"
 
     // Baue den g++-Kommando-String dynamisch
-    val javaHome = System.getProperty("JAVA_HOME")
+    val javaHome = "/JAVA_HOME/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home"
     val includeDir = s"-I $javaHome/include"
     val osIncludeDir = if (osName.contains("mac")) s"-I $javaHome/include/darwin" else s"-I $javaHome/include/linux"
 
