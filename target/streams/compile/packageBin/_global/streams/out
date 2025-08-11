@@ -1,0 +1,21 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/MartinOwono/Desktop/SOSE25/BA/BA-OPAL-static-Dynamic-TestAdapter/target/scala-2.13/ba-opal-static-dynamic-testadapter_2.13-1.0.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	statischeAnalyse[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/MartinOwono/Desktop/SOSE25/BA/BA-OPAL-static-Dynamic-TestAdapter/target/scala-2.13/classes/statischeAnalyse[0m
+[0m[[0m[0mdebug[0m] [0m[0m	statischeAnalyse/StatischeCallGraphRunner$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/MartinOwono/Desktop/SOSE25/BA/BA-OPAL-static-Dynamic-TestAdapter/target/scala-2.13/classes/statischeAnalyse/StatischeCallGraphRunner$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	statischeAnalyse/StatischeCallGraphAdapter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/MartinOwono/Desktop/SOSE25/BA/BA-OPAL-static-Dynamic-TestAdapter/target/scala-2.13/classes/statischeAnalyse/StatischeCallGraphAdapter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	statischeAnalyse/CallGraphResult.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/MartinOwono/Desktop/SOSE25/BA/BA-OPAL-static-Dynamic-TestAdapter/target/scala-2.13/classes/statischeAnalyse/CallGraphResult.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	statischeAnalyse/CallerEntry$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/MartinOwono/Desktop/SOSE25/BA/BA-OPAL-static-Dynamic-TestAdapter/target/scala-2.13/classes/statischeAnalyse/CallerEntry$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	statischeAnalyse/StatischeCallGraphRunner.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/MartinOwono/Desktop/SOSE25/BA/BA-OPAL-static-Dynamic-TestAdapter/target/scala-2.13/classes/statischeAnalyse/StatischeCallGraphRunner.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	statischeAnalyse/CallGraphResult$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/MartinOwono/Desktop/SOSE25/BA/BA-OPAL-static-Dynamic-TestAdapter/target/scala-2.13/classes/statischeAnalyse/CallGraphResult$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	statischeAnalyse/CallerEntry.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/MartinOwono/Desktop/SOSE25/BA/BA-OPAL-static-Dynamic-TestAdapter/target/scala-2.13/classes/statischeAnalyse/CallerEntry.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	statischeAnalyse/StatischeCallGraphAdapter$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/MartinOwono/Desktop/SOSE25/BA/BA-OPAL-static-Dynamic-TestAdapter/target/scala-2.13/classes/statischeAnalyse/StatischeCallGraphAdapter$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

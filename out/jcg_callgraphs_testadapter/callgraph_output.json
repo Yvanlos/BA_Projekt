@@ -1,0 +1,8 @@
+{
+  "affectedClasses" : 0,
+  "numEdge" : 6,
+  "reachableMethods" : 7,
+  "vulnerableMethods" : 0,
+  "callers" : [ ],
+  "callees" : [ ]
+}

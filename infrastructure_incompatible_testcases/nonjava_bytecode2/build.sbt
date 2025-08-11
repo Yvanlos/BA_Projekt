@@ -1,1 +1,0 @@
-libraryDependencies += "de.opal-project" % "opal-developer-tools_2.12" % "2.0.1"

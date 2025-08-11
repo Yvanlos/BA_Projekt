@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="JCG Annotation Matcher,JCG Annotations,JCG Code2Flow JS Test Adapter,JCG Code2Flow Python Test Adapter,JCG DOOP Test Adapter,JCG Data Format,JCG Dynamic Test Adapter,JCG Evaluation,JCG Jarvis Test Adapter,JCG Jelly Test Adapter,JCG OPAL Test Adapter,JCG PyCG Test Adapter,JCG Pyan Test Adapter,JCG Soot Test Adapter,JCG TAJS Test Adapter,JCG Test Adapter Commons,JCG Test Cases,JCG WALA Test Adapter,JCG callgraphs Test Adapter,JCG js-callgraph Test Adapter,ba_projekt,ba_projekt_9200" />
+    <profile name="sbt 1" modules="BA-OPAL-static-Dynamic-TestAdapter,JCG Annotation Matcher,JCG Annotations,JCG Code2Flow JS Test Adapter,JCG Code2Flow Python Test Adapter,JCG DOOP Test Adapter,JCG Data Format,JCG Dynamic Test Adapter,JCG Evaluation,JCG Jarvis Test Adapter,JCG Jelly Test Adapter,JCG OPAL Test Adapter,JCG PyCG Test Adapter,JCG Pyan Test Adapter,JCG Soot Test Adapter,JCG TAJS Test Adapter,JCG Test Adapter Commons,JCG Test Cases,JCG WALA Test Adapter,JCG callgraphs Test Adapter,JCG js-callgraph Test Adapter,ba_projekt,ba_projekt_9200" />
   </component>
 </project>

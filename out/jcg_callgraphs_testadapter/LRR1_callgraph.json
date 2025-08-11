@@ -1,0 +1,17 @@
+{
+  "affectedClasses" : 2,
+  "numEdge" : 7,
+  "reachableMethods" : 8,
+  "vulnerableMethods" : 2,
+  "callers" : [ {
+    "methodName" : "staticInitializerCalled",
+    "className" : "lrr/Left"
+  }, {
+    "methodName" : "staticInitializerCalled",
+    "className" : "lrr/Right"
+  } ],
+  "callees" : [ {
+    "methodName" : "verifyCall",
+    "className" : "lrr/Demo"
+  } ]
+}

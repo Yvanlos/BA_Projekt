@@ -1,1 +1,0 @@
-libraryDependencies += "de.opal-project" %% "opal-developer-tools" % "1.1.0-SNAPSHOT"
