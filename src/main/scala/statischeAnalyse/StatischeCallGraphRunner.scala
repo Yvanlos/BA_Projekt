@@ -1,3 +1,9 @@
+/**
+ * Note:
+ * Ich kann beliebig viele Jars lesen und Analyseiren und die call
+ * Graphs erstellen für einen passenden Vergleich!
+ * */
+
 package statischeAnalyse
 
 import java.io.File

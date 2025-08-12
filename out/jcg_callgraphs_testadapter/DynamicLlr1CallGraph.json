@@ -1,0 +1,37 @@
+[ {
+  "caller" : "Ljava/lang/Class;:forName0(Ljava/lang/String;ZLjava/lang/ClassLoader;Ljava/lang/Class;)Ljava/lang/Class;",
+  "callee" : "Llrr/Left;:<clinit>()V"
+}, {
+  "caller" : "Llrr/Demo;:main([Ljava/lang/String;)V",
+  "callee" : "Ljava/lang/ClassLoader;:checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+}, {
+  "caller" : "Llrr/Demo;:main([Ljava/lang/String;)V",
+  "callee" : "Ljava/lang/Class;:forName(Ljava/lang/String;)Ljava/lang/Class;"
+}, {
+  "caller" : "Llrr/Demo;:main([Ljava/lang/String;)V",
+  "callee" : "Ljava/lang/ClassLoader;:loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+}, {
+  "caller" : "Llrr/Left;:<clinit>()V",
+  "callee" : "Llrr/Left;:staticInitializerCalled()V"
+}, {
+  "caller" : "Llrr/Left;:staticInitializerCalled()V",
+  "callee" : "Ljava/lang/ClassLoader;:checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+}, {
+  "caller" : "Llrr/Left;:staticInitializerCalled()V",
+  "callee" : "Ljava/lang/ClassLoader;:loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+}, {
+  "caller" : "Llrr/Left;:staticInitializerCalled()V",
+  "callee" : "Ljava/io/PrintStream;:println(Ljava/lang/String;)V"
+}, {
+  "caller" : "Llrr/Left;:staticInitializerCalled()V",
+  "callee" : "Ljava/lang/ClassLoader;:checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+}, {
+  "caller" : "Llrr/Left;:staticInitializerCalled()V",
+  "callee" : "Ljava/lang/ClassLoader;:loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+}, {
+  "caller" : "Llrr/Left;:staticInitializerCalled()V",
+  "callee" : "Llrr/Demo;:verifyCall()V"
+}, {
+  "caller" : "TopLevel",
+  "callee" : "Llrr/Demo;:main([Ljava/lang/String;)V"
+} ]
