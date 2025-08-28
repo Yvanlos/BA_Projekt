@@ -1,8 +1,6 @@
 /**
  * TODO:
- * packagePrefix ändern, um z.B. "Llrr/" zu filtern
- * Überlegen, ob man der package Name nicht ins code,
- * sondern bei der ausfuehrung geben soll.
+ * packagePrefix kann beim Ausführen als Argument angegeben werden
  */
 
 import java.io.PrintWriter
@@ -12,37 +10,42 @@ import play.api.libs.json.{Format, Json}
 import scala.collection.Seq
 import scala.io.Source
 
-case class CallRelation(caller: String, callee: String)
+case class MethodReference(className: String, methodName: String)
+object MethodReference {
+  implicit val format: Format[MethodReference] = Json.format[MethodReference]
+}
+
+case class CallRelation(caller: MethodReference, callee: MethodReference)
 object CallRelation {
   implicit val format: Format[CallRelation] = Json.format[CallRelation]
 }
 
-object JsonFilterByPackage {
+object CallGraphFilter {
   def main(args: Array[String]): Unit = {
-    val inputFile = "src/main/Dynamische Analyse/callgraph.json" // große JSON-Datei
-    val outputFile = "out/jcg_callgraphs_testadapter/DynamicLlr1CallGraph.json" //gefiltertes JSON
+    val inputFile = "src/main/Dynamische Analyse/callgraph.json"
+    val outputFile = "out/jcg_callgraphs_testadapter/DynamicFilteredCallGraph.json"
 
-    val packagePrefix = "Llrr/" // wonach gefiltert werden soll
+    // Package Prefix als Argument oder Default
+    val packagePrefix = if (args.nonEmpty) args(0) else "Llrr/"
 
-    //JSON einlesen
+    println(s"Filtere CallGraph nach Package: $packagePrefix")
+
+    // JSON einlesen
     val jsonStr = Source.fromFile(inputFile).mkString
     val jsonArray = Json.parse(jsonStr).as[Seq[CallRelation]]
 
     // Filtern: nur Einträge behalten, deren caller oder callee mit Prefix anfangen
-    val filtered = jsonArray.filter( cr =>
-      cr.caller.startsWith(packagePrefix) || cr.callee.startsWith(packagePrefix))
+    val filtered = jsonArray.filter(cr =>
+      cr.caller.className.startsWith(packagePrefix) || cr.callee.className.startsWith(packagePrefix)
+    )
 
     println(s"Gefilterte Einträge: ${filtered.size}")
 
-    //Gefiltertes JSON in Datei speichern
+    // Gefiltertes JSON in Datei speichern
     val pw = new PrintWriter(outputFile)
-    try {
-      val jsonToWrite = Json.prettyPrint(Json.toJson(filtered))
-      pw.write(jsonToWrite)
-    } finally {
-      pw.close()
-    }
-    println(s"Gespeichert JSON gespeichert in: $outputFile")
-  }
+    try pw.write(Json.prettyPrint(Json.toJson(filtered)))
+    finally pw.close()
 
+    println(s"Gefiltertes JSON gespeichert in: $outputFile")
+  }
 }

@@ -1,0 +1,22 @@
+[
+  {
+    "caller": {
+      "className": "lrr/Left",
+      "methodName": "staticInitializerCalled()V"
+    },
+    "callee": {
+      "className": "lrr/Demo",
+      "methodName": "verifyCall()V"
+    }
+  },
+  {
+    "caller": {
+      "className": "lrr/Right",
+      "methodName": "staticInitializerCalled()V"
+    },
+    "callee": {
+      "className": "lrr/Demo",
+      "methodName": "verifyCall()V"
+    }
+  }
+]
