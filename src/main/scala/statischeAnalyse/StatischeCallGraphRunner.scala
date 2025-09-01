@@ -47,7 +47,6 @@ object StatischeCallGraphRunner {
 
     println("Analyse abgeschlossen:")
     println(report.toString)
-    println("---------------------------ENDE----------------------------------")
   }
 
 }
