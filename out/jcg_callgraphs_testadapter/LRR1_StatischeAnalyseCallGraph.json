@@ -1,0 +1,9 @@
+[{
+            "caller": {"className": "Llrr/Left;", "methodName": "staticInitializerCalled()V"},
+            "callee": {"className": "Llrr/Demo;", "methodName": "verifyCall()V"}
+          }
+        ,{
+            "caller": {"className": "Llrr/Right;", "methodName": "staticInitializerCalled()V"},
+            "callee": {"className": "Llrr/Demo;", "methodName": "verifyCall()V"}
+          }
+        ]

@@ -49,3 +49,5 @@ object CallGraphFilter {
     println(s"Gefiltertes JSON gespeichert in: $outputFile")
   }
 }
+
+

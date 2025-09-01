@@ -1,21 +1,21 @@
 [
   {
     "caller": {
-      "className": "lrr/Left",
+      "className": "Llrr/Left;",
       "methodName": "staticInitializerCalled()V"
     },
     "callee": {
-      "className": "lrr/Demo",
+      "className": "Llrr/Demo;",
       "methodName": "verifyCall()V"
     }
   },
   {
     "caller": {
-      "className": "lrr/Right",
+      "className": "Llrr/Right;",
       "methodName": "staticInitializerCalled()V"
     },
     "callee": {
-      "className": "lrr/Demo",
+      "className": "Llrr/Demo;",
       "methodName": "verifyCall()V"
     }
   }

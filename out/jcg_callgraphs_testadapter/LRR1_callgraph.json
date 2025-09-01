@@ -5,10 +5,10 @@
   "vulnerableMethods" : 2,
   "callers" : [ {
     "methodName" : "staticInitializerCalled",
-    "className" : "lrr/Left"
+    "className" : "lrr/Right"
   }, {
     "methodName" : "staticInitializerCalled",
-    "className" : "lrr/Right"
+    "className" : "lrr/Left"
   } ],
   "callees" : [ {
     "methodName" : "verifyCall",
