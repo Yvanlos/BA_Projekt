@@ -60,77 +60,7 @@ static void getMethodNameSig(jmethodID mid, char** nameSig) {
     } else {
         asprintf(nameSig, "<FAILED>");
     }
-
-    
 }
-/*
-void return_cg() {
-    int channel;
-    struct sockaddr_in serv_addr;
-
-    channel = socket(AF_INET, SOCK_STREAM, 0);
-
-    serv_addr.sin_family = AF_INET;
-    serv_addr.sin_port = htons(port);
-    inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr);
-    connect(channel, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
-
-    json j_callgraph = json::array();
-
-    for (const auto& calls : cg) {
-        const Callsite callsite = calls.first;
-
-        char* caller;
-        if (callsite.topLevel == 1) {
-            caller = (char*)"TopLevel";
-        } else {
-            getMethodNameSig(callsite.mid, &caller);
-        }
-
-        const unordered_set<jmethodID>& callees = calls.second;
-
-        for (const jmethodID mid : callees) {
-            char* callee;
-            getMethodNameSig(mid, &callee);
-
-            json entry = {
-                {"caller", caller},
-                {"callee", callee}
-            };
-            j_callgraph.push_back(entry);
-
-            free(callee);
-        }
-
-        if (callsite.topLevel == 0) {
-            free(caller);
-        }
-    }
-
-    std::string json_str = j_callgraph.dump();
-    send(channel, json_str.c_str(), json_str.size(), 0);
-
-    close(channel);
-}
-*/
-
-/*
-* @brief Aggregiert den JVM Callgraphen und sendet ihn als JSON an einem TCP-Server
-*
-* Diese Funktion traversiert die Globale Callgraph-Struktur `cg`, extrahiert eindeutige klassen,
-* Methoden, Callers und Callees und baut daraus ein JSON-Object im gewünschten Format:
-* {
-     "affectedClasses": ....,
-     "numEdge": .....
-     "reachableMethods": ....
-     "callers": [...],
-     "callees": [...],
-*  }
-*   Das JSON wird auschließend an den über port definierten TCP-Server gesendet
-
-*@note Alle dynamisch allozierten Strings für Caller/callee werden nach Nutzung freigegebn
-*
-*/
 void return_cg() {
     int channel;
     struct sockaddr_in serv_addr;
