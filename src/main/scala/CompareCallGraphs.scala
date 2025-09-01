@@ -16,7 +16,7 @@ trait CallGraph {
     var foundEdges: Seq[Seq[String]] = Seq()
     var missingEdges: Seq[Seq[String]] = Seq()
 
-    // === Fehlende Edges ermitteln ===
+    // Fehlende Edges ermitteln 
     for (expectedEdge <- expectedCG.links) {
       if (!links.exists(edge => edgesMatch(edge, expectedEdge))) {
         missingEdges :+= expectedEdge
@@ -25,10 +25,10 @@ trait CallGraph {
       }
     }
 
-    // === Extra Edges im CallGraph ===
+    // Extra Edges im CallGraph 
     val extraEdges = links.filter(edge => !expectedCG.links.exists(exp => edgesMatch(edge, exp)))
 
-    // === Metrics ===
+    // Metrics 
     val recall = if (expectedCG.links.nonEmpty) foundEdges.size.toDouble / expectedCG.links.size else 1.0
     val precision = if (links.nonEmpty) foundEdges.size.toDouble / links.size else 1.0
 
