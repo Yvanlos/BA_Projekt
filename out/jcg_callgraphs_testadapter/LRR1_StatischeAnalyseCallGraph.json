@@ -1,9 +1,64 @@
-[{
-            "caller": {"className": "Llrr/Left;", "methodName": "staticInitializerCalled()V"},
-            "callee": {"className": "Llrr/Demo;", "methodName": "verifyCall()V"}
-          }
-        ,{
-            "caller": {"className": "Llrr/Right;", "methodName": "staticInitializerCalled()V"},
-            "callee": {"className": "Llrr/Demo;", "methodName": "verifyCall()V"}
-          }
-        ]
+[ {
+  "caller" : {
+    "className" : "Llrr/Left;",
+    "methodName" : "<clinit>()V"
+  },
+  "callee" : {
+    "className" : "Llrr/Left;",
+    "methodName" : "staticInitializerCalled()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Llrr/Right;",
+    "methodName" : "<clinit>()V"
+  },
+  "callee" : {
+    "className" : "Llrr/Right;",
+    "methodName" : "staticInitializerCalled()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Llrr/Left;",
+    "methodName" : "staticInitializerCalled()V"
+  },
+  "callee" : {
+    "className" : "Ljava/io/PrintStream;",
+    "methodName" : "println()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Llrr/Left;",
+    "methodName" : "staticInitializerCalled()V"
+  },
+  "callee" : {
+    "className" : "Llrr/Demo;",
+    "methodName" : "verifyCall()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Llrr/Right;",
+    "methodName" : "staticInitializerCalled()V"
+  },
+  "callee" : {
+    "className" : "Ljava/io/PrintStream;",
+    "methodName" : "println()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Llrr/Right;",
+    "methodName" : "staticInitializerCalled()V"
+  },
+  "callee" : {
+    "className" : "Llrr/Demo;",
+    "methodName" : "verifyCall()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Llrr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "forName()V"
+  }
+} ]

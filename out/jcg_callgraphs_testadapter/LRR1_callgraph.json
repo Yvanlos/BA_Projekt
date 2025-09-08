@@ -1,17 +1,69 @@
 {
-  "affectedClasses" : 2,
+  "affectedClasses" : 5,
   "numEdge" : 7,
   "reachableMethods" : 8,
-  "vulnerableMethods" : 2,
-  "callers" : [ {
-    "methodName" : "staticInitializerCalled",
-    "className" : "lrr/Right"
+  "edges" : [ {
+    "caller" : {
+      "methodName" : "<clinit>",
+      "className" : "lrr/Left"
+    },
+    "callee" : {
+      "methodName" : "staticInitializerCalled",
+      "className" : "lrr/Left"
+    }
   }, {
-    "methodName" : "staticInitializerCalled",
-    "className" : "lrr/Left"
-  } ],
-  "callees" : [ {
-    "methodName" : "verifyCall",
-    "className" : "lrr/Demo"
+    "caller" : {
+      "methodName" : "<clinit>",
+      "className" : "lrr/Right"
+    },
+    "callee" : {
+      "methodName" : "staticInitializerCalled",
+      "className" : "lrr/Right"
+    }
+  }, {
+    "caller" : {
+      "methodName" : "staticInitializerCalled",
+      "className" : "lrr/Left"
+    },
+    "callee" : {
+      "methodName" : "println",
+      "className" : "java/io/PrintStream"
+    }
+  }, {
+    "caller" : {
+      "methodName" : "staticInitializerCalled",
+      "className" : "lrr/Left"
+    },
+    "callee" : {
+      "methodName" : "verifyCall",
+      "className" : "lrr/Demo"
+    }
+  }, {
+    "caller" : {
+      "methodName" : "staticInitializerCalled",
+      "className" : "lrr/Right"
+    },
+    "callee" : {
+      "methodName" : "println",
+      "className" : "java/io/PrintStream"
+    }
+  }, {
+    "caller" : {
+      "methodName" : "staticInitializerCalled",
+      "className" : "lrr/Right"
+    },
+    "callee" : {
+      "methodName" : "verifyCall",
+      "className" : "lrr/Demo"
+    }
+  }, {
+    "caller" : {
+      "methodName" : "main",
+      "className" : "lrr/Demo"
+    },
+    "callee" : {
+      "methodName" : "forName",
+      "className" : "java/lang/Class"
+    }
   } ]
 }
