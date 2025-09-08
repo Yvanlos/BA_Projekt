@@ -12,20 +12,20 @@ import play.api.libs.json._
 
 import scala.collection.mutable
 
-// JSON-Datenstruktur
+// JSON-Datenstrukturen
+case class CallerEntry(methodName: String, className: String)
+case class Edge(caller: CallerEntry, callee: CallerEntry)
+
 case class CallGraphResult(
                             affectedClasses: Int,
                             numEdge: Int,
                             reachableMethods: Int,
-                            vulnerableMethods: Int,
-                            callers: Seq[CallerEntry],
-                            callees: Seq[CallerEntry]
+                            edges: Seq[Edge]
                           )
-
-case class CallerEntry(methodName: String, className: String)
 
 object CallGraphResult {
   implicit val callerEntryWrites: Writes[CallerEntry] = Json.writes[CallerEntry]
+  implicit val edgeWrites: Writes[Edge] = Json.writes[Edge]
   implicit val callGraphResultWrites: Writes[CallGraphResult] = Json.writes[CallGraphResult]
 }
 
@@ -33,8 +33,12 @@ object StatischeCallGraphAdapter extends Analysis[URL, BasicReport] with Analysi
 
   override def title: String = "Statische Callgraph Adapter"
 
-  override def setupProject(cpFiles: Iterable[File], libcpFiles: Iterable[File], completelyLoadLibraries: Boolean, configuredConfig: Config)
-                           (implicit initialLogContext: LogContext): Project[URL] = {
+  override def setupProject(
+                             cpFiles: Iterable[File],
+                             libcpFiles: Iterable[File],
+                             completelyLoadLibraries: Boolean,
+                             configuredConfig: Config
+                           )(implicit initialLogContext: LogContext): Project[URL] = {
     val newConfig = configuredConfig.withValue(
       "org.opalj.br.analyses.cg.InitialEntryPointsKey.analysis",
       ConfigValueFactory.fromAnyRef("org.opalj.br.analyses.cg.ApplicationEntryPointsFinder")
@@ -42,55 +46,37 @@ object StatischeCallGraphAdapter extends Analysis[URL, BasicReport] with Analysi
     super.setupProject(cpFiles, libcpFiles, completelyLoadLibraries, newConfig)
   }
 
-  override def analyze(project: Project[URL], parameters: Seq[String], initProgressManagement: Int => ProgressManagement): BasicReport = {
+  override def analyze(
+                        project: Project[URL],
+                        parameters: Seq[String],
+                        initProgressManagement: Int => ProgressManagement
+                      ): BasicReport = {
     val cg = project.get(RTACallGraphKey)
 
-    // Parameter für Output-Datei auslesen, Standardpfad als Fallback
+    // Parameter für Output-Datei auslesen
     val outputPath = parameters
       .find(_.startsWith("outputFile="))
       .map(_.stripPrefix("outputFile="))
       .getOrElse("out/jcg_callgraphs_testadapter/callgraph_output.json")
 
-    val methodName = "verifyCall"
-    val className = "lrr/Demo"
-
-    val reachableMethods = new mutable.HashSet[DeclaredMethod]()
-
-    def addAllCallers(dm: DeclaredMethod): Unit = {
-      if (reachableMethods.contains(dm)) return
-      cg.callersOf(dm).foreach { triple =>
-        reachableMethods.add(triple._1)
+    // Alle Edges (Caller -> Callee) sammeln
+    val edges = cg.reachableMethods().flatMap { ctx =>
+      val caller = ctx.method
+      cg.calleesOf(caller).flatMap { case (_, callees) =>
+        callees.map { callee =>
+          Edge(
+            CallerEntry(caller.name.toString, caller.declaringClassType.fqn),
+            CallerEntry(callee.method.name.toString, callee.method.declaringClassType.fqn)
+          )
+        }
       }
-      cg.callersOf(dm).foreach { triple =>
-        addAllCallers(triple._1)
-      }
-    }
-
-    val targetMethodOpt = cg.reachableMethods().toList.find { ctx =>
-      ctx.method.declaringClassType.fqn == className && ctx.method.name == methodName
-    }.map(_.method)
-
-    if (targetMethodOpt.isDefined) {
-      addAllCallers(targetMethodOpt.get)
-    } else {
-      println(s"No vulnerable Method found for: $methodName in class $className")
-    }
-
-    val callerEntries = reachableMethods.toSeq.map { m =>
-      CallerEntry(m.name.toString, m.declaringClassType.fqn)
-    }
-
-    val calleeEntries = targetMethodOpt.toSeq.map { m =>
-      CallerEntry(m.name.toString, m.declaringClassType.fqn)
     }
 
     val result = CallGraphResult(
-      affectedClasses = reachableMethods.map(_.declaringClassType).toSet.size,
+      affectedClasses = cg.reachableMethods().map(_.method.declaringClassType).toSet.size,
       numEdge = cg.numEdges,
       reachableMethods = cg.reachableMethods().size,
-      vulnerableMethods = reachableMethods.size,
-      callers = callerEntries,
-      callees = calleeEntries
+      edges = edges.toSeq
     )
 
     // JSON schreiben
@@ -107,12 +93,14 @@ object StatischeCallGraphAdapter extends Analysis[URL, BasicReport] with Analysi
       s"Affected classes: ${result.affectedClasses}",
       s"CG Num Edges = ${result.numEdge}",
       s"CG Reachable Methods = ${result.reachableMethods}",
-      s"CG Vulnerable Methods = ${result.vulnerableMethods}"
+      s"Exported Edges = ${result.edges.size}"
     )
-    val detailedCallers = result.callers.map(e => s"Caller: ${e.methodName} in ${e.className}")
-    val detailedCallees = result.callees.map(e => s"Callee: ${e.methodName} in ${e.className}")
 
-    BasicReport(stats ++ detailedCallers ++ detailedCallees)
+    val detailedEdges = result.edges.take(50).map(e =>
+      s"${e.caller.className}.${e.caller.methodName} -> ${e.callee.className}.${e.callee.methodName}"
+    )
+
+    BasicReport(stats ++ Seq("---- Sample Edges ----") ++ detailedEdges)
   }
 
   override val analysis: Analysis[URL, ReportableAnalysisResult] = this

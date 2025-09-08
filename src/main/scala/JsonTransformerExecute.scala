@@ -1,50 +1,44 @@
 import java.io.{File, PrintWriter}
 import scala.io.Source
-import scala.util.parsing.json.JSON
+import play.api.libs.json._
 
-case class Method(className: String, methodName:String)
+case class Method(className: String, methodName: String)
 case class CallerCallee(caller: Method, callee: Method)
 
 object JsonTransformer {
+  implicit val methodReads: Reads[Method] = Json.reads[Method]
+  implicit val callerCalleeReads: Reads[CallerCallee] = Json.reads[CallerCallee]
+
   def transform(jsonStr: String): String = {
-    val parsed = JSON.parseFull(jsonStr).getOrElse(Map.empty).asInstanceOf[Map[String, Any]]
+    val json = Json.parse(jsonStr)
 
-    def extractMethods(key: String): List[Method] = {
-      parsed.get(key) match {
-        case Some(list: List[Map[String, String] @unchecked]) =>
-          list.map(m=> Method(m("className"), m("methodName")))
-        case _ => Nil
-      }
+    // "edges" extrahieren
+    val edges = (json \ "edges").as[Seq[CallerCallee]]
+
+    def formatClassName(name: String): String =
+      s"L${name.replace('.', '/').stripSuffix(";")};"
+
+    def formatMethodName(name: String): String =
+      s"$name()V"
+
+    val transformed = edges.map { e =>
+      CallerCallee(
+        caller = Method(formatClassName(e.caller.className), formatMethodName(e.caller.methodName)),
+        callee = Method(formatClassName(e.callee.className), formatMethodName(e.callee.methodName))
+      )
     }
 
-    val callers = extractMethods("callers")
-    val callees = extractMethods("callees")
-
-    def formatClassName(name: String): String = s"L${name.replace('.','/').stripSuffix(";")};"
-    def formatMethodName(name: String): String = s"$name()V"
-
-    val pairs = for {
-      caller <- callers
-      callee <- callees
-    } yield CallerCallee(
-      caller = Method(formatClassName(caller.className), formatMethodName(caller.methodName)),
-      callee = Method(formatClassName(callee.className), formatMethodName(callee.methodName))
-    )
-
-    val jsonList = pairs.map { pairs =>
-      s"""{
-            "caller": {"className": "${pairs.caller.className}", "methodName": "${pairs.caller.methodName}"},
-            "callee": {"className": "${pairs.callee.className}", "methodName": "${pairs.callee.methodName}"}
-          }
-        """
-    }
-    "["+ jsonList.mkString(",")+"]"
+    // wieder als JSON
+    Json.prettyPrint(Json.toJson(transformed))
   }
+
+  implicit val methodWrites: Writes[Method] = Json.writes[Method]
+  implicit val callerCalleeWrites: Writes[CallerCallee] = Json.writes[CallerCallee]
 }
 
-object JsonTransformerExecute{
+object JsonTransformerExecute {
   def main(args: Array[String]): Unit = {
-    if(args.length < 2){
+    if (args.length < 2) {
       println("Usage: JsonTransformerApp <InputFile> <OutputFile>")
       sys.exit(1)
     }

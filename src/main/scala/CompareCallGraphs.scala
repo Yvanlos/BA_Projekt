@@ -1,6 +1,6 @@
 import java.io.File
-import scala.util.Using
-import ujson.Value
+import scala.io.Source
+import ujson._
 
 case class ExpectedCG(
                        links: Seq[Seq[String]],
@@ -16,7 +16,7 @@ trait CallGraph {
     var foundEdges: Seq[Seq[String]] = Seq()
     var missingEdges: Seq[Seq[String]] = Seq()
 
-    // Fehlende Edges ermitteln 
+    // Fehlende Edges (FN) und gefundene Edges (TP)
     for (expectedEdge <- expectedCG.links) {
       if (!links.exists(edge => edgesMatch(edge, expectedEdge))) {
         missingEdges :+= expectedEdge
@@ -25,10 +25,10 @@ trait CallGraph {
       }
     }
 
-    // Extra Edges im CallGraph 
+    // Extra Edges (FP)
     val extraEdges = links.filter(edge => !expectedCG.links.exists(exp => edgesMatch(edge, exp)))
 
-    // Metrics 
+    // Precision / Recall
     val recall = if (expectedCG.links.nonEmpty) foundEdges.size.toDouble / expectedCG.links.size else 1.0
     val precision = if (links.nonEmpty) foundEdges.size.toDouble / links.size else 1.0
 
@@ -43,22 +43,39 @@ trait CallGraph {
     )
   }
 
-  private def edgesMatch(edge: Seq[String], expectedEdge: Seq[String]): Boolean = {
+  private def normalizeMethodName(name: String): String = {
+    // Nur MethodenNamen bis zur ersten '(' behalten
+    name.takeWhile(_ != '(')
+  }
+  /*
+    private def edgesMatch(edge: Seq[String], expectedEdge: Seq[String]): Boolean = {
+      edge.zip(expectedEdge).forall { case (e, ee) =>
+        if (!ee.contains(":")) e.split(":").head == ee else e == ee
+      }
+    }
+  }
+  */
+  private def edgesMatch(edge: Seq[String], expectedEdge: Seq[String]) : Boolean = {
     edge.zip(expectedEdge).forall { case (e, ee) =>
-      if (!ee.contains(":")) e.split(":").head == ee else e == ee
+      val Array(eClass, eMethod) = e.split(":", 2)
+      val Array(eeClass, eeMethod) = ee.split(":", 2)
+      eClass == eeClass && normalizeMethodName(eMethod) == normalizeMethodName(eeMethod)
     }
   }
 }
-
 case class ComparisonResult(
-                             foundEdges: Seq[Seq[String]],
-                             missingEdges: Seq[Seq[String]],
-                             extraEdges: Seq[Seq[String]],
+                             foundEdges: Seq[Seq[String]],   // True Positives
+                             missingEdges: Seq[Seq[String]], // False Negatives
+                             extraEdges: Seq[Seq[String]],   // False Positives
                              precision: Double,
                              recall: Double,
                              callGraphSize: Int,
                              groundTruthSize: Int
-                           )
+                           ) {
+  def truePositives: Int = foundEdges.size
+  def falsePositives: Int = extraEdges.size
+  def falseNegatives: Int = missingEdges.size
+}
 
 case class JsonCallGraph(filePath: String, links: Seq[Seq[String]]) extends CallGraph
 
@@ -72,20 +89,21 @@ object CompareCallGraphs {
     val groundTruthFile = new File(args(0))
     val callGraphFile   = new File(args(1))
 
-    val groundJson = ujson.read(scala.io.Source.fromFile(groundTruthFile).mkString)
+    // Beide JSON-Dateien bestehen aus Arrays
+    val groundJson = ujson.read(Source.fromFile(groundTruthFile).mkString).arr
     val expectedCG = ExpectedCG(
-      links = groundJson.arr.map(edge => Seq(
-        edge("caller")("className").str,
-        edge("callee")("className").str
+      links = groundJson.map(edge => Seq(
+        edge("caller")("className").str + ":" + edge("caller")("methodName").str,
+        edge("callee")("className").str + ":" + edge("callee")("methodName").str
       )).toSeq
     )
 
-    val callJson = ujson.read(scala.io.Source.fromFile(callGraphFile).mkString)
+    val callJson = ujson.read(Source.fromFile(callGraphFile).mkString).arr
     val callGraph = JsonCallGraph(
       filePath = callGraphFile.getAbsolutePath,
-      links = callJson.arr.map(edge => Seq(
-        edge("caller")("className").str,
-        edge("callee")("className").str
+      links = callJson.map(edge => Seq(
+        edge("caller")("className").str + ":" + edge("caller")("methodName").str,
+        edge("callee")("className").str + ":" + edge("callee")("methodName").str
       )).toSeq
     )
 
@@ -93,7 +111,10 @@ object CompareCallGraphs {
 
     println(s"Call Graph Größe: ${result.callGraphSize}")
     println(s"Ground Truth Größe: ${result.groundTruthSize}")
-    println(s"Gefundene Edges in CallGraph: ${result.foundEdges.map(_.mkString(" -> ")).mkString(", ")}")
+    println(s"True Positives (TP): ${result.truePositives}")
+    println(s"False Positives (FP): ${result.falsePositives}")
+    println(s"False Negatives (FN): ${result.falseNegatives}")
+    println(s"Gefundene Edges : ${result.foundEdges.map(_.mkString(" -> ")).mkString(", ")}")
     println(s"Fehlende Edges: ${result.missingEdges.map(_.mkString(" -> ")).mkString(", ")}")
     println(s"Extra Edges: ${result.extraEdges.map(_.mkString(" -> ")).mkString(", ")}")
     println(f"Precision: ${result.precision}%.3f")
