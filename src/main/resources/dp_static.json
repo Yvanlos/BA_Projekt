@@ -1,0 +1,136 @@
+[ {
+  "caller" : {
+    "className" : "Ldp/FooImpl;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/Main;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ldp/FooImpl;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/Main;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/Main;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ldp/FooImpl;",
+    "methodName" : "bar()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance()V"
+  },
+  "callee" : {
+    "className" : "Ldp/FooImpl;",
+    "methodName" : "getClass()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "getClass()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance()V"
+  },
+  "callee" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "getClass()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "getClassLoader()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance()V"
+  },
+  "callee" : {
+    "className" : "Ldp/FooImpl;",
+    "methodName" : "getClass()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "getClass()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance()V"
+  },
+  "callee" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "getClass()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "getInterfaces()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance()V"
+  },
+  "callee" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/reflect/Proxy;",
+    "methodName" : "newProxyInstance()V"
+  }
+} ]

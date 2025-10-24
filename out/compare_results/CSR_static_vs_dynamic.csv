@@ -1,0 +1,4 @@
+Test;DynSize;StatSize;DynamicFeatures;StaticFound;DynamicFound
+CSR1;8;2;Class.forName,inter-procedural string propagation;Class.forName;Class.forName
+CSR3;8;2;Class.forName,static field propagation;Class.forName;Class.forName
+CSR4;14;6;Class.forName,System.getProperty,System.setProperties;Class.forName, System.getProperty, System.setProperties;Class.forName, System.getProperty, System.setProperties

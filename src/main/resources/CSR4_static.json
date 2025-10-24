@@ -1,0 +1,55 @@
+[ {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "callForName()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/System;",
+    "methodName" : "getProperty()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "callForName()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "forName()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/System;",
+    "methodName" : "getProperties()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/util/Properties;",
+    "methodName" : "put()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/System;",
+    "methodName" : "setProperties()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "callForName()V"
+  }
+} ]

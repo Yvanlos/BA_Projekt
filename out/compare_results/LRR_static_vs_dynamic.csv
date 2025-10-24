@@ -1,0 +1,4 @@
+Test;DynSize;StatSize;DynamicFeatures;StaticFound;DynamicFound
+LRR1;10;7;"Class.forName,staticInitializerCalled";"Class.forName, staticInitializerCalled";"Class.forName, staticInitializerCalled"
+LRR2;13;4;"Class.forName,Ljava/lang/StringBuilder";"Class.forName";"Class.forName, Ljava/lang/StringBuilder"
+LRR3;9;3;"Class.forName";"Class.forName";"Class.forName"

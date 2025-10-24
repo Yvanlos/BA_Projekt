@@ -133,9 +133,6 @@ void return_cg() {
     close(channel);
 }
 
-
-
-
 void JNICALL MethodEntry(jvmtiEnv *jvmti, JNIEnv* jni, jthread thread, jmethodID method) {
     jlocation loc;
 

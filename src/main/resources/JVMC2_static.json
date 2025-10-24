@@ -1,0 +1,37 @@
+[ {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "finalize()V"
+  },
+  "callee" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "callback()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "finalize()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "finalize()V"
+  }
+} ]

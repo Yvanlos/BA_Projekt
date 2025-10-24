@@ -1,0 +1,6 @@
+Test;DynSize;StatSize;DynamicFeatures;StaticFound;DynamicFound
+JVMC1;10;5;"Runtime.addShutdownHook,Thread.start,Runnable.run,callback";"Runtime.addShutdownHook";"Runtime.addShutdownHook, Runnable.run, callback"
+JVMC2;3;4;"finalize,callback";"finalize, callback";""
+JVMC3;10;7;"Thread.start,Thread.run,verifyReachability";"Thread.start, Thread.run";"Thread.start, Thread.run, verifyReachability"
+JVMC4;9;7;"Thread.start,Thread.exit";"Thread.start, Thread.exit";"Thread.start"
+JVMC5;15;11;"Thread.setUncaughtExceptionHandler,Thread.dispatchUncaughtException,callback";"Thread.setUncaughtExceptionHandler, callback";"Thread.setUncaughtExceptionHandler, callback"

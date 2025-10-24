@@ -1,0 +1,127 @@
+[ {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/reflect/Method;",
+    "methodName" : "invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "target(Ljava/lang/String;)Ljava/lang/String;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "target(Ljava/lang/String;)Ljava/lang/String;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "target(Ljava/lang/String;)Ljava/lang/String;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "target(Ljava/lang/String;)Ljava/lang/String;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "target(Ljava/lang/String;)Ljava/lang/String;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "target(Ljava/lang/String;)Ljava/lang/String;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "toString()Ljava/lang/String;"
+  }
+}, {
+  "caller" : {
+    "className" : "Lsun/reflect/NativeMethodAccessorImpl;",
+    "methodName" : "invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "target(Ljava/lang/String;)Ljava/lang/String;"
+  }
+}, {
+  "caller" : {
+    "className" : "TopLevel",
+    "methodName" : "TopLevel"
+  },
+  "callee" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  }
+} ]

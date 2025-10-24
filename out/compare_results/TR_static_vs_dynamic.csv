@@ -1,0 +1,10 @@
+Test;DynSize;StatSize;DynamicFeatures;StaticFound;DynamicFound
+TR1;6;3;"Class.getDeclaredMethod,Method.invoke";"Class.getDeclaredMethod, Method.invoke";"Class.getDeclaredMethod, Method.invoke"
+TR2;9;6;"Class.getDeclaredMethod,Method.invoke";"Class.getDeclaredMethod, Method.invoke";"Class.getDeclaredMethod, Method.invoke"
+TR3;9;6;"Class.getMethod,Method.invoke";"Class.getMethod, Method.invoke";"Class.getMethod, Method.invoke"
+TR4;11;6;"Class.getDeclaredMethod,Method.invoke";"Class.getDeclaredMethod, Method.invoke";"Class.getDeclaredMethod, Method.invoke"
+TR5;7;4;"Class.newInstance";"Class.newInstance";"Class.newInstance"
+TR6;8;5;"Class.getConstructor,Constructor.newInstance";"Class.getConstructor, Constructor.newInstance";"Class.getConstructor, Constructor.newInstance"
+TR7;10;7;"Class.getDeclaredField,Field.get";"Class.getDeclaredField, Field.get";"Class.getDeclaredField, Field.get"
+TR8;10;7;"Class.getField,.Field.get";"Class.getField, .Field.get";"Class.getField, .Field.get"
+TR9;7;3;"Class.forName,staticInitializerCalled";"Class.forName, staticInitializerCalled";"Class.forName, staticInitializerCalled"

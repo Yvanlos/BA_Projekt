@@ -1,0 +1,28 @@
+[ {
+  "caller" : {
+    "className" : "Llrr/Demo;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Llrr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Llrr/Demo;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Llrr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "forName()V"
+  }
+} ]

@@ -1,0 +1,28 @@
+[ {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "TopLevel",
+    "methodName" : "TopLevel"
+  },
+  "callee" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  }
+} ]

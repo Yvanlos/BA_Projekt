@@ -1,0 +1,118 @@
+[ {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ltr/CallTarget;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/reflect/Field;",
+    "methodName" : "get(Ljava/lang/Object;)Ljava/lang/Object;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ltr/CallTarget;",
+    "methodName" : "target()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/CallTarget;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "TopLevel",
+    "methodName" : "TopLevel"
+  },
+  "callee" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  }
+} ]

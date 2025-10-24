@@ -34,7 +34,7 @@ object StatischeCallGraphRunner {
     )
 
     // JSON-Ausgabe-Datei
-    val outputFileName = s"jcg_static_dynamic_cg_testAdapter/out/${jarFile.getName.stripSuffix(".jar")}_callgraph.json"
+    val outputFileName = s"jcg_static_dynamic_cg_testAdapter/out/${jarFile.getName.stripSuffix(".jar")}_static.json"
 //jcg_static_dynamic_cg_testAdapter
     // Analyse starten
     val report: BasicReport = StatischeCallGraphAdapter.analyze(

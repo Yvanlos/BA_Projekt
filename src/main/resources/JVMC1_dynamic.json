@@ -1,0 +1,118 @@
+[ {
+  "caller" : {
+    "className" : "Ljava/lang/Thread;",
+    "methodName" : "run()V"
+  },
+  "callee" : {
+    "className" : "Ljvmc/TargetRunnable;",
+    "methodName" : "run()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljvmc/TargetRunnable;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Runtime;",
+    "methodName" : "getRuntime()Ljava/lang/Runtime;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Thread;",
+    "methodName" : "<init>(Ljava/lang/Runnable;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Runtime;",
+    "methodName" : "addShutdownHook(Ljava/lang/Thread;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/TargetRunnable;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/TargetRunnable;",
+    "methodName" : "run()V"
+  },
+  "callee" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "callback()V"
+  }
+}, {
+  "caller" : {
+    "className" : "TopLevel",
+    "methodName" : "TopLevel"
+  },
+  "callee" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  }
+} ]

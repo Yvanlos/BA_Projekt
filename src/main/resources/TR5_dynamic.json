@@ -1,0 +1,64 @@
+[ {
+  "caller" : {
+    "className" : "Lsun/reflect/NativeConstructorAccessorImpl;",
+    "methodName" : "newInstance0(Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "newInstance()Ljava/lang/Object;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "verifyCall()V"
+  }
+}, {
+  "caller" : {
+    "className" : "TopLevel",
+    "methodName" : "TopLevel"
+  },
+  "callee" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  }
+} ]

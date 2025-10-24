@@ -1,0 +1,19 @@
+[ {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "callForName()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "forName()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "callForName()V"
+  }
+} ]

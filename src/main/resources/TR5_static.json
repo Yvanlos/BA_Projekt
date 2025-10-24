@@ -1,0 +1,37 @@
+[ {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "verifyCall()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "newInstance()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "<init>()V"
+  }
+} ]

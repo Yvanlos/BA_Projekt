@@ -1,0 +1,100 @@
+[ {
+  "caller" : {
+    "className" : "Ljvmc/ExceptionalExceptionHandler;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/TargetRunnable;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/ExceptionalExceptionHandler;",
+    "methodName" : "uncaughtException()V"
+  },
+  "callee" : {
+    "className" : "Ljvmc/ExceptionalExceptionHandler;",
+    "methodName" : "callback()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljvmc/TargetRunnable;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Thread;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljvmc/ExceptionalExceptionHandler;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Thread;",
+    "methodName" : "setUncaughtExceptionHandler()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Thread;",
+    "methodName" : "start()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Thread;",
+    "methodName" : "exit()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Thread;",
+    "methodName" : "run()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Thread;",
+    "methodName" : "join()V"
+  }
+} ]

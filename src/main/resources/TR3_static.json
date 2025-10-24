@@ -1,0 +1,55 @@
+[ {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "caller()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "caller()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "getMethod()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "caller()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/reflect/Method;",
+    "methodName" : "invoke()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "caller()V"
+  },
+  "callee" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "target()V"
+  }
+} ]

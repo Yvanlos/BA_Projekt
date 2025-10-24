@@ -1,0 +1,64 @@
+[ {
+  "caller" : {
+    "className" : "Ljvmc/TargetRunnable;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljvmc/TargetRunnable;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Thread;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Thread;",
+    "methodName" : "start()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Thread;",
+    "methodName" : "exit()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Thread;",
+    "methodName" : "run()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ljvmc/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Thread;",
+    "methodName" : "join()V"
+  }
+} ]

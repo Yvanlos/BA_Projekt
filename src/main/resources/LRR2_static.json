@@ -1,0 +1,46 @@
+[ {
+  "caller" : {
+    "className" : "Llrr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Llrr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "append()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Llrr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "append()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Llrr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "toString()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Llrr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "forName()V"
+  }
+} ]

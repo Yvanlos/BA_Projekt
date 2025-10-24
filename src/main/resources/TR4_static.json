@@ -1,0 +1,64 @@
+[ {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "getDeclaredMethod()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/reflect/Method;",
+    "methodName" : "invoke()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "target()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "target()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "target()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "append()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "target()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "append()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "target()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "toString()V"
+  }
+} ]

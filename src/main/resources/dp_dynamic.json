@@ -1,0 +1,442 @@
+[ {
+  "caller" : {
+    "className" : "Ldp/Main;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/Main;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ldp/FooImpl;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/Main;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance(Ljava/lang/Object;)Ljava/lang/Object;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/Main;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/Main;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ldp/$Proxy0;",
+    "methodName" : "bar(Ljava/lang/Object;)Ljava/lang/Object;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/FooImpl;",
+    "methodName" : "<init>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance(Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "getClass()Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance(Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "getClassLoader()Ljava/lang/ClassLoader;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance(Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance(Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance(Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "getClass()Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance(Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "getInterfaces()[Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance(Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "<init>(Ljava/lang/Object;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance(Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/reflect/Proxy;",
+    "methodName" : "newProxyInstance(Ljava/lang/ClassLoader;[Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance(Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/reflect/Proxy;",
+    "methodName" : "<clinit>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance(Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "newInstance(Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "<init>(Ljava/lang/Object;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Object;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/$Proxy0;",
+    "methodName" : "<clinit>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "forName(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/$Proxy0;",
+    "methodName" : "<clinit>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "forName(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/$Proxy0;",
+    "methodName" : "<clinit>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/$Proxy0;",
+    "methodName" : "<clinit>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "forName(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/$Proxy0;",
+    "methodName" : "<clinit>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/$Proxy0;",
+    "methodName" : "<clinit>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "forName(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/$Proxy0;",
+    "methodName" : "<clinit>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/$Proxy0;",
+    "methodName" : "<clinit>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "forName(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/$Proxy0;",
+    "methodName" : "<clinit>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "forName(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/$Proxy0;",
+    "methodName" : "<clinit>()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/$Proxy0;",
+    "methodName" : "<init>(Ljava/lang/reflect/InvocationHandler;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/reflect/Proxy;",
+    "methodName" : "<init>(Ljava/lang/reflect/InvocationHandler;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/$Proxy0;",
+    "methodName" : "bar(Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "<init>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/reflect/Method;",
+    "methodName" : "getName()Ljava/lang/String;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/StringBuilder;",
+    "methodName" : "toString()Ljava/lang/String;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/io/PrintStream;",
+    "methodName" : "println(Ljava/lang/String;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Ldp/DebugProxy;",
+    "methodName" : "invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/reflect/Method;",
+    "methodName" : "invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"
+  }
+}, {
+  "caller" : {
+    "className" : "Lsun/reflect/NativeMethodAccessorImpl;",
+    "methodName" : "invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ldp/FooImpl;",
+    "methodName" : "bar(Ljava/lang/Object;)Ljava/lang/Object;"
+  }
+}, {
+  "caller" : {
+    "className" : "Lsun/reflect/NativeConstructorAccessorImpl;",
+    "methodName" : "newInstance0(Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ldp/$Proxy0;",
+    "methodName" : "<init>(Ljava/lang/reflect/InvocationHandler;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Lsun/reflect/NativeConstructorAccessorImpl;",
+    "methodName" : "newInstance0(Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Ljava/lang/Object;"
+  },
+  "callee" : {
+    "className" : "Ldp/$Proxy0;",
+    "methodName" : "<clinit>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "TopLevel",
+    "methodName" : "TopLevel"
+  },
+  "callee" : {
+    "className" : "Ldp/Main;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  }
+} ]

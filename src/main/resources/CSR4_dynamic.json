@@ -1,0 +1,145 @@
+[ {
+  "caller" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "forName0(Ljava/lang/String;ZLjava/lang/ClassLoader;Ljava/lang/Class;)Ljava/lang/Class;"
+  },
+  "callee" : {
+    "className" : "Lcsr/TargetClass;",
+    "methodName" : "<clinit>()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/System;",
+    "methodName" : "getProperties()Ljava/util/Properties;"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/util/Hashtable;",
+    "methodName" : "put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/System;",
+    "methodName" : "setProperties(Ljava/util/Properties;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  },
+  "callee" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "callForName()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "callForName()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/System;",
+    "methodName" : "getProperty(Ljava/lang/String;)Ljava/lang/String;"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "callForName()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "forName(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "callForName()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)V"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "callForName()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/ClassLoader;",
+    "methodName" : "loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/TargetClass;",
+    "methodName" : "<clinit>()V"
+  },
+  "callee" : {
+    "className" : "Lcsr/TargetClass;",
+    "methodName" : "staticInitializerCalled()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Lcsr/TargetClass;",
+    "methodName" : "staticInitializerCalled()V"
+  },
+  "callee" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "verifyCall()V"
+  }
+}, {
+  "caller" : {
+    "className" : "TopLevel",
+    "methodName" : "TopLevel"
+  },
+  "callee" : {
+    "className" : "Lcsr/Demo;",
+    "methodName" : "main([Ljava/lang/String;)V"
+  }
+} ]

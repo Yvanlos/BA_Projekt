@@ -1,0 +1,28 @@
+[ {
+  "caller" : {
+    "className" : "Ltr/InitializedClass;",
+    "methodName" : "<clinit>()V"
+  },
+  "callee" : {
+    "className" : "Ltr/InitializedClass;",
+    "methodName" : "staticInitializerCalled()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/InitializedClass;",
+    "methodName" : "staticInitializerCalled()V"
+  },
+  "callee" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "verifyCall()V"
+  }
+}, {
+  "caller" : {
+    "className" : "Ltr/Demo;",
+    "methodName" : "main()V"
+  },
+  "callee" : {
+    "className" : "Ljava/lang/Class;",
+    "methodName" : "forName()V"
+  }
+} ]
